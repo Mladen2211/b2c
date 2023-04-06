@@ -1,0 +1,97 @@
+@import '~@fixit/assets/styles/fonts';
+@import '~@fixit/assets/styles/variables';
+@import '~@fixit/assets/styles/general';
+
+
+$body-font-family: "Niveau Grotesk";
+$title-font: "Niveau Grotesk";
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .6;
+    }
+}
+.salon-instagram{
+    overflow: hidden;
+    font-family: $body-font-family, sans-serif !important;
+    &__title{
+        display: flex;
+        span{
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 36px;
+            height: 35px;
+        }
+        @media (max-width: 1262px) {
+            padding-left: 4%;
+        }
+    }
+    &__slide-track {
+        width: calc(280px * 7);
+        animation: scroll 30s linear infinite;
+        &:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translate(0);
+            }
+            100% {
+                transform: translateX(calc(-280px*7));
+            }
+        }
+    }
+    &__first-track {
+        position: absolute;
+    }
+    &__second-track {
+        position: relative;
+        top: 0;
+        right: calc(-100%);
+    }
+    &__image-column {
+        min-width: 280px; 
+        height: 280px; 
+        overflow: hidden;
+    }
+    &__center {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    &__caption {
+        position: absolute;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+        width: 280px;
+        opacity: .6;
+        background-color: black;
+        z-index: 9999;
+        animation: slide-in .5s ease;
+    }
+    &__image {
+        position: relative;
+        text-decoration: none;
+    }
+    &__caption p {
+        width: 150px;
+        //height: 150px;
+       opacity: 1;
+       color:white;
+    }
+    &__type {
+        position: absolute;
+        z-index: 99999;
+        top: 0;
+        right: 5px;
+    }
+    &__salon-selector {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+
+}

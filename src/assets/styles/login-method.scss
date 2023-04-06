@@ -1,0 +1,129 @@
+@import 'https://cdn.fixitonline.no/assets/styles/fonts.css';
+@import 'https://cdn.fixitonline.no/assets/styles/variables.css';
+@import 'https://cdn.fixitonline.no/assets/styles/general.css';
+@import url("https://cdn.fixitonline.no/assets/public/fixit-icons/style.css");
+
+
+$body-font-family: "Niveau Grotesk";
+$title-font: "Niveau Grotesk";
+
+.login-dialog {
+    &--login {
+        &__content {
+            height: 100%;
+            background-image: linear-gradient(180deg, #BFE5E8 0%, #EFDDD1 100%);
+            .v-app-bar {
+                .v-toolbar__content {
+                    height: 70px !important;
+                    text-align: center;
+                    padding-left: 0;
+                }
+            }
+
+            &-container {
+                width: 100%;
+                height: calc(100% - 70px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                color: #472449;
+                margin: auto;
+                max-width: 358px;
+                &--text {
+                    text-align: center;
+                    margin: auto;
+                    max-width: 358px;
+
+                    &__title {
+                        font-family: 'Lust Regular', sans-serif !important;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 32px;
+                        line-height: 44px;
+                        align-self: center;
+                        text-align: center;
+                        padding-bottom: 5px;
+                    }
+
+                    &__subtitle {
+                        max-width: 358px;
+                        line-height: 28px;
+                        font-family: $body-font-family, sans-serif !important;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 24px;
+                        align-self: center;
+                        text-align: center;
+
+                        &--warning {
+                            color: #EA412A;
+                            line-height: 28px;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 24px;
+                            align-self: center;
+                            text-align: center;
+                        }
+                    }
+                    &__fine-print {
+                        text-align: center;
+                        margin: auto;
+                        max-width: 358px;
+                    }
+                    &__input {
+                        .v-input__append-inner {
+                            margin-top: auto;
+                            margin-bottom: auto;
+                            padding-right: 10px;
+                        }
+                        input {
+                            padding-left: 10px;
+                            background-color: none !important;
+                        }
+                        .v-input .v-label {
+                            padding-left: 5px;
+                        }
+                        .v-label--active {
+                            padding: 0px 0px 0px 5px;
+                            color: var(--v-primary-base) !important;
+                            font-weight: bold;
+                            top: -8px;
+                        }
+                    }
+                }
+
+                &--options {
+                    align-self: center;
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    &_limited {
+                        max-width: 358px;
+                    }
+
+                    .v-btn {
+                        min-height: 44px !important;
+                        text-transform: none !important;
+                    }
+                }
+                &--switch {
+                    .v-input--selection-controls {
+                        margin: 0px;
+                    }
+                    .v-input {
+                        border: 1px solid red;
+                    }
+                    .v-input__slot {
+                        background-color: transparent !important;
+                    }
+                }
+            }
+        }
+    }
+
+    //Override default disabled button colors
+    .theme--dark.v-btn.v-btn--disabled.v-btn--has-bg {
+        background-color: rgba(71, 36, 73, 0.5) !important;
+        color: white !important;
+    }
+}

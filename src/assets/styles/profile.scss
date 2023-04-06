@@ -1,0 +1,193 @@
+.noscroll {
+    position: fixed;
+    overflow: hidden;
+}
+.removeBodyScrollWidth::-webkit-scrollbar {
+    width: 0px !important;
+}
+.profile {
+    min-height: 100%;
+    min-width: 100%;
+    &__container {
+        max-width: 1170px;
+        margin: 0 auto;
+        @media (max-width: 1220px){
+            margin: 0px 20px;
+        }
+
+        &--breadcrumbs {
+            height: 10px;
+        }
+        &--navigation {
+            height: 100%;
+            &--list {
+                
+                //Remove dark overlay
+                .theme--light.v-list-item--active:hover::before, .theme--light.v-list-item--active::before {
+                    opacity: 0 !important;
+                }
+                .v-list-item__title {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+                &-item {
+                    min-height: 57px;
+                    &:hover {
+                        cursor: pointer;
+                        .v-list-item__title {
+                            color: var(--v-primary-base);
+                        }
+                        i::before {
+                            color: var(--v-primary-base)
+                        }
+                    }
+                }
+            }
+            &__linebreak {
+                border-color: var(--v-primary-opacity-36);
+            }
+            &__portal-linebreak {
+                border-image: linear-gradient(90deg, #BFE5E8 0%, #FCE583 51.04%, #EFDDD1 100%) 1;
+            }
+            &__zig-zag {
+                background: #ffffff;
+                position: relative;
+                height: 16px;
+                z-index: 1;
+                &:before,
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                }
+                &:before {
+                    height: (16px - 4px);
+                    top: 110%;
+                    background: linear-gradient(-135deg, #222222 8px, transparent 0) 0 8px, linear-gradient( 135deg, #222222 8px, transparent 0) 0 8px;
+                    background-position: top left;
+                    background-repeat: repeat-x;
+                    background-size: 16px 16px;
+                }
+                &:after {
+                    height: 16px;
+                    top: 100%;
+                    background: linear-gradient(-135deg, #ffffff 8px, transparent 0) 0 8px, linear-gradient( 135deg, #ffffff 8px, transparent 0) 0 8px;
+                    background-position: top left;
+                    background-repeat: repeat-x;
+                    background-size: 16px 16px;
+                }
+            }
+        }
+        &--content {
+            &__title{
+                height: 25px;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 25px;
+                color: var(--v-primary-base);
+                display: flex;
+                justify-content: space-between;
+            }
+            &__consents {
+                &--subtitle {
+                    font-weight: 300;
+                    font-size: 20px;
+                }
+            }
+            &__payment-methods {
+                &--cards-container {
+                    &__card {
+                        border-radius: 12px !important;
+                        border: 1px solid #A391A4 !important;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+            &__employee {
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 21px;
+                &--description {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 23px;
+                }
+            }
+            &__treatment {
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 21px;
+            }
+            &__product {
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 21px;
+            }
+            &__mysalons {
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 21px;
+            }
+            &__orderhistory {
+                &--price {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                &--details-price {
+                    gap: 3px;
+                    font-size: 18px;
+                    &__from {
+                        font-size: 13px;
+                        line-height: 16px;
+                        position: relative;
+                        top: -5px;
+                    }
+                }   
+                &--details {
+                    font-size: 14px;
+                }
+            }
+            &__membershipProgram {
+                &--header {
+                    background: var(--v-primary-base); 
+                    color: var(--v-primary-text-base);
+                }
+                &--portal-header {
+                    background: linear-gradient(90deg, #BFE5E8 0%, #EFDDD1 100%);
+                    color: var(--v-primary-base);
+                }
+                &--points {
+                    color: var(--v-primary-base);
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                &--info-page {
+                    color: var(--v-primary-base);
+                    &__title {
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 22px;
+                        &--points {
+                            font-weight: 700;
+                            font-size: 72px;
+                            line-height: 84px;
+                        }
+                    }
+                    &__description {
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 23px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
